@@ -1,0 +1,321 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1.4;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3rem;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*BEGIN CUSTOM CSS*/
+/* Global styles */
+/* 
+	Reset font sizes 
+	1.4 rem = 14px
+	1rem = 10px
+*/
+html {
+    font-size: 62.5%;
+}
+
+.grid {
+    display: grid;
+}
+
+
+.site-wrapper {
+    padding: 3rem 5rem;
+}
+
+/* header */
+header {
+    background-color: black;
+}
+
+#wrapper-header {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 1rem;
+}
+
+header label {
+    color: white;
+    justify-self: end;
+}
+
+/* .hero-section */
+section.hero-section {
+    background-image: url(../images/hero-bkg.png);
+    height: 70rem;
+    display: grid;
+    justify-items: center;
+}
+
+section.hero-section h1 {
+    align-self: end;
+    font-size: 7rem;
+    max-width: 23rem;
+    text-align: justify;
+}
+
+section.hero-section h5 {
+    text-align: right;
+    width: 100%;
+    max-width: 20rem;
+}
+
+/* .main-nav */
+#main-nav {
+    display: none;
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    background-color: white;
+    right: 0;
+}
+
+#main-nav ul {
+    display: grid;
+}
+
+#main-nav ul a {
+    text-decoration: none;
+    font-size: 20px;
+    color: gray;
+}
+
+#show-menu {
+    display: none;
+}
+
+#show-menu:checked~#main-nav {
+    display: block;
+}
+
+/* .about-section */
+
+.about-section {
+    background-color: #616161;
+    color: white;
+}
+
+.about-section h5 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.about-section img {
+    width: 100%;
+}
+
+.about-section span.small {
+    font-size: 1.1rem;
+    display: block;
+}
+
+.about-section .grid {
+    gap: 1.5rem;
+}
+
+/* .quote-section */
+
+.quote-section {
+    background-color: #616161;
+    color: white;
+    position: relative;
+}
+
+.quote-section img {
+    position: absolute;
+    z-index: 0;
+    max-width: 100%;
+    top: 0;
+    right: 0;
+}
+
+.quote-section .quote {
+    position: relative;
+    display: grid;
+    min-height: 530px;
+    padding: 10em 0 0 2em;
+}
+
+.quote-section blockquote {
+    font-size: 2em;
+    align-self: end;
+    max-width: 13em;
+}
+
+.quote-section blockquote span {
+    font-size: 2.5em;
+    font-weight: 200;
+    display: block;
+    line-height: 1;
+}
+
+.quote-section blockquote::before {
+    content: '\201c';
+    font-size: 8em;
+    display: block;
+    height: 100px;
+    line-height: 1;
+}
+
+.quote-section p {
+    padding-left: 2em;
+    align-self: start;
+}
+
+.experience-section {
+    background-color: #616161;
+    text-align: center;
+    color: #fff;
+}
+
+.experience-section h2 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.experience-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    margin: 0 1em;
+    align-content: end;
+    margin-top: 3em;
+}
+
+.experience-column:nth-child(1) {
+    margin-bottom: 2em;
+}
+
+.experience-column:nth-child(1) .experience-card {
+    margin-bottom: 1em;
+}
+
+.experience-column:nth-child(2) {
+    margin-top: 2em;
+}
+
+.experience-column:nth-child(2) .experience-card {
+    margin-bottom: 1em;
+}
+
+.experience-card {
+    background-color: black;
+    padding: 1em;
+    text-align: left;
+    display: grid;
+    align-items: end;
+    min-height: 18em;
+    align-content: end;
+}
+
+.experience-card h3 {
+    font-size: 1.75em;
+    font-weight: 600;
+}
+
+@media (min-width: 800px) {
+    #main-nav {
+        width: 25%;
+    }
+
+    header img {
+        max-width: fit-content;
+    }
+
+    .about-section .site-wrapper.grid {
+        gap: 1.5rem;
+        grid-template-columns: 1fr 1fr;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .about-section .site-wrapper.grid .grid h5 {
+        align-self: end;
+
+    }
+
+    .quote-section img {
+        max-width: fit-content;
+    }
+
+    .quote-wrapper, .experience-wrapper {
+        max-width: 900px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .quote-section blockquote {
+        max-width: 20em;
+    }
+
+    .experience-wrapper .experience-column {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5em;
+        padding-top: 3em;
+    }
+
+    .experience-wrapper .experience-column .experience-card {
+        margin-top: 2em;
+    }
+
+    .experience-wrapper .experience-column .experience-card:nth-child(2) {
+        margin-bottom: 2em;
+        margin-top: 0;
+    }
+
+    .experience-card {
+        min-height: 20em;
+    }
+}
